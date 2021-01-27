@@ -9,9 +9,9 @@
       <header>
         <nav>
             <ul>
-              <li><a href="#">Информация</a></li>
-              <li><a href="#">Фото и видео</a></li>
-              <li><a href="#">Карта штата</a></li>
+              <li><a href="info.html">Информация</a></li>
+              <li><a href="media.html">Фото и видео</a></li>
+              <li><a href="map.html">Карта штата</a></li>
               <li><a>Гостиницы</a></li>
             </ul>>
             <a href="index.html">
@@ -26,25 +26,17 @@
             <h2>Критерии поиска</h2>
             <form method="get" action="">
                 <fieldset>
-                    <legend>Инфраструктура</legend>
-                    <ul>
-                        <li>
-                            <input type="checkbox" name="swimming" id="filter-swimming" checked>
-                            <label for="filter-swimming">Бассейн</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="parking" id="filter-parking">
-                            <label for="filter-parking">Парковка</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="wi-fi" id="filter-wi-fi">
-                            <label for="filter-wi-fi">WI-FI</label>
-                        </li>
-                    </ul>
+                    <legend>Инфраструктура:</legend>
+                        <input type="checkbox" name="swimming" id="filter-swimming" checked>
+                        <label for="filter-swimming">Бассейн</label>
+                        <input type="checkbox" name="parking" id="filter-parking">
+                        <label for="filter-parking">Парковка</label>
+                        <input type="checkbox" name="wi-fi" id="filter-wi-fi">
+                        <label for="filter-wi-fi">WI-FI</label>
                 </fieldset>
 
                 <fieldset>
-                <legend>Тип жилья</legend>
+                <legend>Тип жилья:</legend>
                     <ul>
                         <li>
                             <input type="checkbox" name="hotel" id="filter-hotel" checked>
@@ -62,9 +54,12 @@
                 </fieldset>
                     
                 <fieldset>
-                    <legend>Стоимость в сутки</legend>
+                    <legend>Стоимость в сутки (Р):</legend>
                     <div>
-                        <!--границы цены-->
+                        <p>от 0</p>
+                        <input type="number" min="0" max="3000" value="0">
+                        <p>До 3000</p>
+                        <input type="number" min="0" max="3000" value="3000">
                     </div>
                     <div>
                         <!--выбор цены-->
