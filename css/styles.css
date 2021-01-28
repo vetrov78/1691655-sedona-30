@@ -14,8 +14,8 @@
 
 .search{
 	background-image: url("../img/catalog_background.jpg");
-	background-color: antiquewhite;
 	border: 3px dashed #cfab49;
+	width: 1200px;
 }
 
 .hidden {
