@@ -16,16 +16,19 @@
               <li><a>Гостиницы</a></li>
             </ul>>
             <a href="index.html">
-              <img src="img/logo.svg" alt="Логотип сайта">
+              <img src="img/logo.svg" width="138" height="70" alt="Логотип сайта">
             </a>
           </nav>
       </header>
 
       <main>
         <h1>Гостиницы Седоны</h1>
-        <section>
-            <h2>Критерии поиска</h2>
+        <section class="search">
+            <h2 class="hidden">Критерии поиска</h2>
             <form method="get" action="">
+              <!--
+              <img src="img/catalog_background.jpg" width="1200" height="217" alt="catalog background">
+              -->
                 <fieldset>
                     <legend>Инфраструктура:</legend>
                         <input type="checkbox" name="swimming" id="filter-swimming" checked>
@@ -49,10 +52,14 @@
                 <fieldset>
                     <legend>Стоимость в сутки (Р):</legend>
                     <div>
-                        <p>от 0</p>
-                        <input type="number" min="0" max="3000" value="0">
-                        <p>До 3000</p>
-                        <input type="number" min="0" max="3000" value="3000">
+                        <label style="text-transform: uppercase;">
+                          от
+                          <input type="number" min="0" max="3000" value="0">
+                        </label>
+                        <label style="text-transform: uppercase;">
+                          До
+                          <input type="number" min="0" max="3000" value="3000">
+                        </label>
                     </div>
                     <div>
                         <!--выбор цены-->

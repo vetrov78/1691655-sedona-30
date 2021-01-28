@@ -11,3 +11,13 @@
 .rating-mini > span:before {
 	content: '★';
 }
+
+.search{
+	background-image: url("../img/catalog_background.jpg");
+	background-color: antiquewhite;
+	border: 3px dashed #cfab49;
+}
+
+.hidden {
+	display: none;
+}
