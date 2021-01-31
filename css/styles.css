@@ -1,13 +1,27 @@
 /* variables */
 
 :root {
-  --basic-black ;
+  --basic-black: #000000;
+  --basic-white: #FFFFFF;
+  --basic-brown: #766357;
+
+  --background-gray:#888888;
+  --background-blue: #81B3D2;
+  --text-black: #333333;
+  --rating-text: #666666;
+  
+  --active-brown: #604E43;
+  --push-brown: #503E33;
+
+  --active-blue: #669EC0;
+  --push-blue: #5496BD;
 }
 
 /* global */
 
 body {
-
+	margin: 0;
+	
 }
 
 .rating-mini {
