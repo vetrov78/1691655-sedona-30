@@ -1,28 +1,74 @@
 /* variables */
 
 :root {
-  --basic-black: #000000;
   --basic-white: #FFFFFF;
   --basic-brown: #766357;
+  --basic-blue: #81B3D2;
+  --basic-gray:#888888;
 
-  --background-gray:#888888;
-  --background-blue: #81B3D2;
-  --text-black: #333333;
+  --title-text:  #000000;
+  --ordinary-text: #333333;
   --rating-text: #666666;
   
-  --active-brown: #604E43;
-  --push-brown: #503E33;
+  --button-hover: #604E43;
+  --button-focus: #503E33;
 
-  --active-blue: #669EC0;
-  --push-blue: #5496BD;
+  --social-hover: #669EC0;
+  --social-focus: #5496BD;
 }
 
 /* global */
 
 body {
+	min-width: 1200px;
 	margin: 0;
-	
+	padding: 0;
+	font-family: "PT Sans", sans-serif;
+	font-size: 14px;
+	line-height: 21px;
+	font-weight: 400;
+	text-transform: uppercase;
+	background-color: var(--background-gray);
 }
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.main-navigation {
+	line-height: 26px;
+	font-weight: 700;
+	background-color: var(--basic-white);
+}
+
+.site-navigation {
+	list-style: none;
+}
+
+.site-navigation a {
+	color: var(--title-text);
+}
+
+.site-navigation a:hover {
+	color: var(--basic-blue);
+}
+
+.site-navigation a:focus {
+	opacity: 0.3;
+}
+
+.welcome{
+	background-image: url("../img/index_background.jpg");
+	/* border: 1px dashed red; */
+	width: 1200px;
+	height: 509px;
+}
+
 
 .rating-mini {
 	display: inline-block;
