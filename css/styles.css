@@ -119,6 +119,17 @@ img {
 	line-height: 24px;
 }
 
+.top-search-button {
+	width: 568px;
+	height: 86px;
+	font-family: PT Sans;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 21px;
+	line-height: 26px;
+	color: var(--basic-white);
+	background-color: var(--basic-brown);
+}
 
 .rating-mini {
 	display: inline-block;

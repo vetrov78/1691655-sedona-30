@@ -113,10 +113,22 @@
       <img src="img/map.png" width="1199" height="579" alt="Карта">
     </figure>
 
-    <section class="form-search">
+    <div class="search-form">
       <h2>Поиск гостиницы в Седоне</h2>
-      <!--форма поиска-->
-    </section>
+      <input class="top-search-form" type="button" value="Поиск гостиницы в Седоне">
+
+      <section class="bottom-search-form">
+        <label class="start-date-label" for="start">Дата заезда:</label>
+          <input class="date-input" type="date" id="start" value="2017-04-23">
+        <label class="finish-date-label" for="finish">Дата выезда:</label>
+          <input class="date-input" type="date" id="finish" value="2017-07-4">
+        <label class="search-adults-label" for="adults">Взрослые:</label>
+          <input class="adults-input" type="number" id="adults" value="2">
+        <label class="search-children-label" for="children">Взрослые:</label>
+          <input class="children-input" type="number" id="children" value="0"> 
+        <input class="search-button" type="submit" value="Найти">
+      </section>
+    </div>
   </main>
 
   <footer>
