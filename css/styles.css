@@ -2,6 +2,7 @@
 
 :root {
   --basic-white: #FFFFFF;
+  --white-opacity: rgba(255, 255, 255, 0.3);
   --basic-brown: #766357;
   --basic-blue: #81B3D2;
   --basic-gray:#888888;
@@ -12,11 +13,14 @@
   --items-background: #EEEEEE;
   --image-background: #9EB0B5;
   
-  --button-hover: #604E43;
-  --button-focus: #503E33;
+  --brown-hover: #604E43;
+  --brown-focus: #503E33;
 
-  --social-hover: #669EC0;
-  --social-focus: #5496BD;
+  --blue-hover: #669EC0;
+  --blue-focus: #5496BD;
+
+  --input-number: #F2F2F2;
+  --input-number-hover: #EBEBEB;
 }
 
 /* global */
@@ -131,16 +135,80 @@ img {
 	background-color: var(--basic-brown);
 }
 
+.top-search-button:hover {
+	background-color: var(--brown-hover);
+}
+
+.top-search-button:focus {
+	background-color: var(--brown-focus);
+	color: var(--white-opacity);
+}
+
+.bottom-search-form {
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 26px;
+}
+
+input.number {
+	background-color: var(--input-number);
+}
+
+input.number:hover {
+	background-color: var(--input-number-hover);
+}
+
+input.number:focus {
+	background-color: var(--basic-white);
+}
+
+.date-input {
+	width: 346px;
+	height: 38px;
+}
+
+.search-button {
+	width: 458px;
+	height: 58px;
+	background-color: var(--basic-blue);
+	text-transform: uppercase;
+	color: var(--basic-white);
+	font-weight: bold;
+	font-size: 21px;
+	line-height: 27px;
+}
+
+.search-button:hover {
+	background-color: var(--blue-hover);
+}
+
+.search-button:focus {
+	background-color: var(--blue-focus);
+	color: var(--white-opacity);
+}
+
+.contacts {
+	font-weight: bold;
+	font-size: 21px;
+	line-height: 26px;
+}
+
+.social-item:hover {
+	background-color: var(--blue-hover);
+}
+
 .rating-mini {
 	display: inline-block;
 	font-size: 0;
 }
+
 .rating-mini span {
 	padding: 0;
 	font-size: 20px;
 	line-height: 1;
 	color:#81B3D2;
 }
+
 .rating-mini > span:before {
 	content: '★';
 }
