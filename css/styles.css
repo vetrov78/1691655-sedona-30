@@ -190,6 +190,7 @@ img {
 	line-height: 26px;
 	color: var(--basic-white);
 	background-color: var(--basic-brown);
+	border: none;
 }
 
 .top-search-button:hover {
@@ -236,6 +237,7 @@ input.number:focus {
 	font-weight: bold;
 	font-size: 21px;
 	line-height: 27px;
+	border: none;
 }
 
 .search-button:hover {
@@ -263,7 +265,7 @@ input.number:focus {
 	text-transform: uppercase;
 	background-color: var(--basic-blue);
 	color: var(--basic-white);
-	border: 0;
+	border: none;
 }
 
 .detail-button:hover {
@@ -310,8 +312,46 @@ input.number:focus {
 	line-height: 26px;
 }
 
-.social-item:hover {
-	background-color: var(--blue-hover);
+.facebook-icon {
+	width: 46px;
+	height: 48px;
+	background-image: url(../img/icons/icon_facebook_.svg);
+}
+
+.facebook-icon:hover {
+	background-image: url(../img/icons/icon_facebook_hover.svg);
+}
+
+.facebook-icon:focus {
+	background-image: url(../img/icons/icon_facebook_focus.svg);
+}
+
+.twitter-icon {
+	width: 46px;
+	height: 48px;
+	background-image: url(../img/icons/icon_twitter_.svg);
+}
+
+.twitter-icon:hover {
+	background-image: url(../img/icons/icon_twitter_hover.svg);
+}
+
+.twitter-icon:focus {
+	background-image: url(../img/icons/icon_twitter_focus.svg);
+}
+
+.youtube-icon {
+	width: 46px;
+	height: 48px;
+	background-image: url(../img/icons/icon_youtube_.svg);
+}
+
+.youtube-icon:hover {
+	background-image: url(../img/icons/icon_youtube_hover.svg);
+}
+
+.youtube-icon:focus {
+	background-image: url(../img/icons/icon_youtube_focus.svg);
 }
 
 .rating-mini {
