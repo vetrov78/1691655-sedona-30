@@ -62,7 +62,6 @@ img {
 
 .main-container {
 	width: 100%;
-	outline: 1px dashed blue;
 	grid-column: 1/-1;
 }
 
@@ -107,7 +106,8 @@ img {
 .site-logo {
 	position: absolute;
 	z-index: 1;
-	/* left: 531px; */
+	left: 50%;
+	transform: translate(-10px);
 }
 
 .active a {
@@ -120,6 +120,7 @@ img {
 	height: 509px;
 	margin: 0;
 	background-repeat: no-repeat;
+	position: relative;
 }
 
 .background-welcome-image {
@@ -130,7 +131,8 @@ img {
 .welcome-words {
 	position: absolute;
 	z-index: 1;
-	left: 100px;
+	left: 50%;
+	transform: translate(-170px, 70px);
 }
 
 .top-title {
@@ -357,20 +359,6 @@ input.number:focus {
 	line-height: 26px;
 }
 
-.facebook-icon {
-	width: 46px;
-	height: 48px;
-	background-image: url(../img/icons/icon_facebook_.svg);
-}
-
-.facebook-icon:hover {
-	background-image: url(../img/icons/icon_facebook_hover.svg);
-}
-
-.facebook-icon:focus {
-	background-image: url(../img/icons/icon_facebook_focus.svg);
-}
-
 .twitter-icon {
 	display: inline-block;
 	background-color: var(--basic-blue);
@@ -379,27 +367,44 @@ input.number:focus {
 
 .twitter-icon:hover {
 	background-color: var(--blue-hover);
-	fill: var(--basic-white);
-	fill-opacity: 0.3;
 }
 
 .twitter-icon:focus {
 	background-color: var(--blue-focus);
+	fill: var(--basic-white);
+	fill-opacity: 0.3;
+}
 
+.facebook-icon {
+	display: inline-block;
+	background-color: var(--basic-blue);
+	fill: white;	
+}
+
+.facebook-icon:hover {
+	background-color: var(--blue-hover);
+}
+
+.facebook-icon:focus {
+	background-color: var(--blue-focus);
+	fill: var(--basic-white);
+	fill-opacity: 0.3;
 }
 
 .youtube-icon {
-	width: 46px;
-	height: 48px;
-	background-image: url(../img/icons/icon_youtube_.svg);
+	display: inline-block;
+	background-color: var(--basic-blue);
+	fill: white;	
 }
 
 .youtube-icon:hover {
-	background-image: url(../img/icons/icon_youtube_hover.svg);
+	background-color: var(--blue-hover);
 }
 
 .youtube-icon:focus {
-	background-image: url(../img/icons/icon_youtube_focus.svg);
+	background-color: var(--blue-focus);
+	fill: var(--basic-white);
+	fill-opacity: 0.3;
 }
 
 .rating-mini {
