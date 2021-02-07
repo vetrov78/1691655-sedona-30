@@ -21,6 +21,7 @@
 
   --input-number: #F2F2F2;
   --input-number-hover: #EBEBEB;
+  --academy-logo-focus: #BDBBBC;
 }
 
 /* global */
@@ -72,7 +73,7 @@ img {
 }
 
 .navigation-list, .features-list,
-.social-list, .search-result {
+.search-result {
 	list-style: none;
 	padding: 0;
 }
@@ -353,10 +354,46 @@ input.number:focus {
 	border: 0;
 }
 
+.image-map {
+	margin: 0;
+}
+
+.footer-container {
+	display: grid;
+	grid-template-columns: 327px 400px 327px;
+	margin: 0 73px;
+}
+
 .contacts {
 	font-weight: bold;
 	font-size: 21px;
 	line-height: 26px;
+	padding-top: 14px;
+	padding-bottom: 27px;
+}
+
+.contacts-text {
+	margin: 9px 0px;
+}
+
+.socials {
+	position: relative;
+	font-size: 0px;
+}
+
+.social-list {
+	margin: 0px;
+	list-style: none;
+	position: absolute;
+	top: 50%;
+	margin-top: -23px;
+	left: 50%;
+	margin-left: -103px;
+}
+
+.social-item {
+	display: inline;
+	margin-right: 6px;
 }
 
 .twitter-icon {
@@ -364,11 +401,9 @@ input.number:focus {
 	background-color: var(--basic-blue);
 	fill: white;
 }
-
 .twitter-icon:hover {
 	background-color: var(--blue-hover);
 }
-
 .twitter-icon:focus {
 	background-color: var(--blue-focus);
 	fill: var(--basic-white);
@@ -380,11 +415,9 @@ input.number:focus {
 	background-color: var(--basic-blue);
 	fill: white;	
 }
-
 .facebook-icon:hover {
 	background-color: var(--blue-hover);
 }
-
 .facebook-icon:focus {
 	background-color: var(--blue-focus);
 	fill: var(--basic-white);
@@ -396,15 +429,42 @@ input.number:focus {
 	background-color: var(--basic-blue);
 	fill: white;	
 }
-
 .youtube-icon:hover {
 	background-color: var(--blue-hover);
 }
-
 .youtube-icon:focus {
 	background-color: var(--blue-focus);
 	fill: var(--basic-white);
 	fill-opacity: 0.3;
+}
+
+.academy-link-container {
+	position: relative;
+}
+
+.academy-link-text {
+	position: absolute;
+	display: inline-block;
+	line-height: 26px;
+	left: 65px;
+	top: 48px;
+}
+
+.academy-link-logo {
+	display: inline-block;
+	position: absolute;
+	left: 147px;
+	top: 38px;
+}
+
+.academy-logo {
+	fill: var(--ordinary-text);
+}
+.academy-logo:hover {
+	fill: var(--basic-blue);
+}
+.academy-logo:focus {
+	fill: var(--academy-logo-focus);
 }
 
 .rating-mini {
