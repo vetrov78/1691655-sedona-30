@@ -77,11 +77,14 @@ img {
 	font-size: 0;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 56px;
 }
 
 .navigation-item {
 	text-align: center;
 	font-size: 14px;
+	line-height: 26px;
+	margin-top: 14px;
 }
 
 .navigation-item a {
@@ -150,11 +153,14 @@ img {
 	font-weight: 700;
 	color: var(--basic-black);
 	margin: 0px 365px;
-	padding: 42px 0px;
+	margin-top: 42.5px;
 }
 
-.top-title__text {
+.top-title-text {
 	line-height: 26px;
+	margin: 0 340px;
+	margin-top: 16.5px;
+	margin-bottom: 51px;
 }
 
 .inner-grid{
@@ -180,7 +186,7 @@ img {
 	grid-area: p2;
 }
 
-feature-2 {
+.feature-2 {
 	grid-area: f2;
 }
 
@@ -200,7 +206,35 @@ feature-2 {
 .main-feature-item {
 	width: 400px;
 	box-sizing: border-box;
-	padding: 60px 55px;
+	padding: 55px 55px;
+	position: relative;
+}
+
+.house-svg {
+	height: 72px;
+	width: 75px;
+	margin: auto;
+	margin-top: 5px;
+	margin-bottom: 28px;
+	background-image: url(../img/icon_house.svg);
+}
+
+.burger-svg {
+	height: 70px;
+	width: 75px;
+	margin: auto;
+	margin-top: 6px;
+	margin-bottom: 28px;
+	background-image: url(../img/icon_burger.svg);
+}
+
+.box-svg {
+	height: 77px;
+	width: 64px;
+	margin: auto;
+	margin-top: 0px;
+	margin-bottom: 28px;
+	background-image: url(../img/icon_box.svg);
 }
 
 .features {
@@ -210,7 +244,8 @@ feature-2 {
 .feature-title {
 	font-size: 21px;
 	font-weight: 700;
-	padding: 0 70px;	
+	padding: 0 70px;
+	margin-bottom: 25px;	
 }
 
 .feature-item {
