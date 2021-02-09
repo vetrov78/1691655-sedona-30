@@ -514,6 +514,13 @@ input.number:focus {
 	fill: var(--academy-logo-focus);
 }
 
+/* CATALOG */
+
+.catalog-page {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
 .rating-mini {
 	display: inline-block;
 	font-size: 0;
@@ -533,7 +540,7 @@ input.number:focus {
 .search-form{
 	background-image: url("../img/catalog_background.jpg");
 	outline: 1px dashed #cfab49;
-	width: 1200px;
+	width: 50%;
 	display: grid;
 }
 
