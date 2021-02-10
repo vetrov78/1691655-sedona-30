@@ -34,6 +34,10 @@ img {
 	height: auto;
 }
 
+.hidden {
+	display: none;
+}
+
 .page-body {
 	min-width: 1200px;
 	margin: 0 auto;
@@ -46,6 +50,12 @@ img {
 	text-transform: uppercase;
 	background-color: var(--basic-gray);
 	color: var(--ordinary-text);
+}
+
+.title-style {
+	font-weight: bold;
+	font-size: 21px;
+	line-height: 26px;
 }
 
 /* INDEX PAGE */
@@ -127,7 +137,7 @@ img {
 	content: "";
 	position: absolute;
 	width: 100%;
-	height: 57px;
+	height: 56px;
 	bottom: 0;
 	left: 0px;
 	background-image: url(../img/background_mask.svg)
@@ -153,8 +163,6 @@ img {
 }
 
 .top-title {
-	font-size: 21px;
-	font-weight: 700;
 	margin-top: 42.5px;
 }
 
@@ -406,9 +414,6 @@ input.number:focus {
 }
 
 .contacts {
-	font-weight: bold;
-	font-size: 21px;
-	line-height: 26px;
 	padding-top: 14px;
 	padding-bottom: 27px;
 	padding-left: 73px;
@@ -521,6 +526,10 @@ input.number:focus {
 	padding: 0 73px;
 }
 
+.search-results-list {
+	padding-inline-start: 0;
+}
+
 .search-results-header{
 	outline: 1px solid blue;
 	margin: 0;
@@ -528,11 +537,13 @@ input.number:focus {
 
 .search-results-item {
 	text-align: left;
+	margin-top: 30px;
 	display: grid;
 	grid-template-areas: 
 	"im name name stars"
 	"im type price ."
-	"im details book rating";
+	"im details book rating"
+	"l l l l";
 }
 
 .hotel-image {
@@ -583,6 +594,8 @@ input.number:focus {
 	content: '★';
 }
 
-.hidden {
-	display: none;
+.separate-line {
+	grid-area: l;
+	height: 1px;
+	background-image: url(../img/separate_line.svg);
 }
