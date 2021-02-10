@@ -32,30 +32,42 @@
 
     <main class="catalog-page container">
         <h1 class="hidden">Гостиницы Седоны</h1>
-        <section class="search-form">
+        <section>
           <h2 class="hidden">Критерии поиска</h2>
-          <form method="get" action="">
-            <fieldset class="infrastucture-field">
-              <legend>Инфраструктура:</legend>
-              <input type="checkbox" name="swimming" id="filter-swimming" checked>
-              <label for="filter-swimming">Бассейн</label>
-              <input type="checkbox" name="parking" id="filter-parking">
-              <label for="filter-parking">Парковка</label>
-              <input type="checkbox" name="wi-fi" id="filter-wi-fi">
-              <label for="filter-wi-fi">WI-FI</label>
+          <form class="search-form" method="get" action="">
+            <fieldset class="infrastucture-field field">
+                <legend>Инфраструктура:</legend>              
+                <label class="criteria-label" for="filter-swimming">
+                    <input type="checkbox" name="swimming" id="filter-swimming" checked>
+                    Бассейн
+                </label>
+                <label class="criteria-label" for="filter-parking"></label>
+                    <input type="checkbox" name="parking" id="filter-parking">
+                    Парковка
+                </label>
+                <label class="criteria-label" for="filter-wi-fi"></label>
+                    <input type="checkbox" name="wi-fi" id="filter-wi-fi">
+                    WI-FI
+                </label>
+              </fieldset>
+
+              <fieldset class="accomodation-type-field field">
+                <legend>Тип жилья:</legend>
+                <label class="criteria-label" for="filter-hotel">
+                    <input type="checkbox" name="hotel" id="filter-hotel" checked>
+                    Гостиница
+                </label>
+                <label class="criteria-label" for="filter-motel">
+                    <input type="checkbox" name="motel" id="filter-motel" checked>
+                    Мотель
+                </label>
+                <label class="criteria-label" for="filter-aparts">
+                    <input type="checkbox" name="aparts" id="filter-aparts" checked>
+                    Апартаменты
+                </label>
             </fieldset>
 
-            <fieldset class="accomodation-type-field">
-              <legend>Тип жилья:</legend>
-              <input type="checkbox" name="hotel" id="filter-hotel" checked>
-              <label for="filter-hotel">Гостиница</label>
-              <input type="checkbox" name="motel" id="filter-motel" checked>
-              <label for="filter-motel">Мотель</label>
-              <input type="checkbox" name="aparts" id="filter-aparts" checked>
-              <label for="filter-aparts">Апартаменты</label>
-            </fieldset>
-
-            <fieldset class="price-field">
+            <fieldset class="price-field field">
               <legend>Стоимость в сутки (Р):</legend>
               <div>
                 <label style="text-transform: uppercase;">
@@ -70,8 +82,9 @@
               <div>
                 <!--выбор цены-->
               </div>
+              <button type="submit">Показать</button>
             </fieldset>
-            <button type="submit">Показать</button>
+            
           </form>
         </section>
 
@@ -99,7 +112,9 @@
                           <span></span>
                           <span></span>
                       </div>
-                      <div class="hotel-rating">Рейтинг: <span>8,5</span></div> 
+                      <div class="hotel-rating">
+                          <span class="hotel-rating-text">Рейтинг: 8,5</span>
+                      </div> 
                       <div class="separate-line"></div>                     
                   </li>
                   <li class="search-results-item">                    
@@ -117,7 +132,7 @@
                           <span></span>
                       </div>
                       <div class="hotel-rating">
-                          Рейтинг: <span>8,9</span>
+                          <span class="hotel-rating-text">Рейтинг: 8,9</span>
                       </div>
                       <div class="separate-line"></div> 
                   </li>
@@ -135,7 +150,7 @@
                     </a>
                     <input class="hotel-book-button" type="submit" value="Забронировать">
                     <div class="hotel-rating">
-                        Рейтинг: <span>9,2</span>
+                        <span class="hotel-rating-text">Рейтинг: 9,2</span>
                     </div>
                     <div class="separate-line"></div> 
                   </li>
