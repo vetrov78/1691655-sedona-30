@@ -376,7 +376,7 @@ input.number:focus {
 
 .hotel-book-button {
 	width: 142px;
-	padding: 3px 0px;
+	/* padding: 3px 0px; */
 	font-weight: 700;
 	line-height: 21px;
 	text-transform: uppercase;
@@ -544,39 +544,56 @@ input.number:focus {
 	"im type price ."
 	"im details book rating"
 	"l l l l";
+	grid-template-columns: 135px 139px auto 110px;
 }
 
 .hotel-image {
+	margin-top: 30px;
 	grid-area: im;
+	width: 100%;
 }
 
 .hotel-name {
-	grid-area: name;
-	margin: 0;
+	margin-top: 23.5px;
+	margin-bottom: 0px;
+	grid-area: name;	
+	padding-left: 29px;
 }
 
 .hotel-rating {
-	text-align: right;
+	background-color: var(--input-number);
+	margin-top: 15.5px;
+	padding: 3px auto;
+	text-align: center;
 	grid-area: rating;
 }
 
 .hotel-type {
 	grid-area: type;
+	margin-top: 7px;
+	margin-left: 29px;
 }
 
 .hotel-price {
+	margin-top: 7px;
 	grid-area: price;
+	margin-left: 6px;
 }
 
 .hotel-book-button {
+	margin-top: 15.5px;
 	grid-area: book;
+	margin-left: 6px;
 }
 
 .hotel-details-button {
+	margin-top: 15.5px;
 	grid-area: details;
+	padding-left: 29px;
 }
 
 .hotel-stars {
+	margin-top: 29px;
 	text-align: right;
 	display: inline-block;
 	font-size: 0;
@@ -595,6 +612,7 @@ input.number:focus {
 }
 
 .separate-line {
+	margin-top: 30px;
 	grid-area: l;
 	height: 1px;
 	background-image: url(../img/separate_line.svg);
