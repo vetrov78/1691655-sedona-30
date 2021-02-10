@@ -366,7 +366,7 @@ input.number:focus {
 	color: var(--white-opacity);
 }
 
-.book-button {
+.hotel-book-button {
 	width: 142px;
 	padding: 3px 0px;
 	font-weight: 700;
@@ -377,11 +377,11 @@ input.number:focus {
 	border: none;
 }
 
-.book-button:hover {
+.hotel-book-button:hover {
 	background-color: var(--brown-hover);
 }
 
-.book-button:focus {
+.hotel-book-button:focus {
 	background-color: var(--brown-focus);
 	color: var(--white-opacity);
 }
@@ -512,31 +512,74 @@ input.number:focus {
 
 /* CATALOG */
 
-.catalog-page {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-}
-
 .search-form {
-	display: grid;
-	grid-column: 1/-1;
 	background-image: url("../img/catalog_background.jpg");
 	outline: 1px dashed #cfab49;		
 }
 
-.rating-mini {
-	display: inline-block;
-	font-size: 0;
+.search-results {
+	padding: 0 73px;
 }
 
-.rating-mini span {
+.search-results-header{
+	outline: 1px solid blue;
+	margin: 0;
+}
+
+.search-results-item {
+	text-align: left;
+	display: grid;
+	grid-template-areas: 
+	"im name name stars"
+	"im type price ."
+	"im details book rating";
+}
+
+.hotel-image {
+	grid-area: im;
+}
+
+.hotel-name {
+	grid-area: name;
+	margin: 0;
+}
+
+.hotel-rating {
+	text-align: right;
+	grid-area: rating;
+}
+
+.hotel-type {
+	grid-area: type;
+}
+
+.hotel-price {
+	grid-area: price;
+}
+
+.hotel-book-button {
+	grid-area: book;
+}
+
+.hotel-details-button {
+	grid-area: details;
+}
+
+.hotel-stars {
+	text-align: right;
+	display: inline-block;
+	font-size: 0;
+	grid-area: stars;
+}
+
+.hotel-stars span {
 	padding: 0;
 	font-size: 20px;
 	line-height: 1;
 	color:#81B3D2;
 }
 
-.rating-mini > span:before {
+.hotel-stars > span:before {
 	content: '★';
 }
 
