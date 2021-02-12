@@ -36,39 +36,39 @@
           <h2 class="hidden">Критерии поиска</h2>
           <form class="search-form" method="get" action="">
             <fieldset class="infrastucture-field field">
-                <legend>Инфраструктура:</legend>              
-                <label class="criteria-label" for="filter-swimming">
+                <legend class="criteria-title">Инфраструктура:</legend>              
+                <label class="criteria-label" for="filter-swimming">Бассейн
                     <input type="checkbox" name="swimming" id="filter-swimming" checked>
-                    Бассейн
+                    <span class="checkmark"></span>
                 </label>
-                <label class="criteria-label" for="filter-parking"></label>
+                <label class="criteria-label" for="filter-parking">Парковка
                     <input type="checkbox" name="parking" id="filter-parking">
-                    Парковка
+                    <span class="checkmark"></span>
                 </label>
-                <label class="criteria-label" for="filter-wi-fi"></label>
+                <label class="criteria-label" for="filter-wi-fi">WI-FI
                     <input type="checkbox" name="wi-fi" id="filter-wi-fi">
-                    WI-FI
+                    <span class="checkmark"></span>
                 </label>
               </fieldset>
 
               <fieldset class="accomodation-type-field field">
-                <legend>Тип жилья:</legend>
-                <label class="criteria-label" for="filter-hotel">
+                <legend class="criteria-title">Тип жилья:</legend>
+                <label class="criteria-label" for="filter-hotel">Гостиница
                     <input type="checkbox" name="hotel" id="filter-hotel" checked>
-                    Гостиница
+                    <span class="checkmark"></span>
                 </label>
-                <label class="criteria-label" for="filter-motel">
-                    <input type="checkbox" name="motel" id="filter-motel" checked>
-                    Мотель
+                <label class="criteria-label" for="filter-motel">Мотель
+                    <input type="checkbox" name="motel" id="filter-motel" checked disabled>
+                    <span class="checkmark"></span>
                 </label>
-                <label class="criteria-label" for="filter-aparts">
-                    <input type="checkbox" name="aparts" id="filter-aparts" checked>
-                    Апартаменты
+                <label class="criteria-label" for="filter-aparts">Апартаменты
+                    <input type="checkbox" name="aparts" id="filter-aparts" disabled>
+                    <span class="checkmark"></span>
                 </label>
             </fieldset>
 
             <fieldset class="price-field field">
-              <legend>Стоимость в сутки (Р):</legend>
+              <legend class="criteria-title">Стоимость в сутки (Р):</legend>
               <div>
                 <label style="text-transform: uppercase;">
                   от
@@ -82,7 +82,11 @@
               <div>
                 <!--выбор цены-->
               </div>
-              <button type="submit">Показать</button>
+              <button class="show-button" type="submit">
+                  <svg width="137" height="36" viewBox="0 0 137 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="1" y="1" width="135" height="34" rx="1" stroke="white" stroke-width="2"/>
+                  </svg>            
+              </button>
             </fieldset>
             
           </form>
@@ -114,8 +118,7 @@
                       </div>
                       <div class="hotel-rating">
                           <span class="hotel-rating-text">Рейтинг: 8,5</span>
-                      </div> 
-                      <div class="separate-line"></div>                     
+                      </div>                     
                   </li>
                   <li class="search-results-item">                    
                       <img class="hotel-image" src="img/DesertQuailINN.jpg" width="135" height="90" alt="Desert Quail Inn">                   
@@ -134,7 +137,7 @@
                       <div class="hotel-rating">
                           <span class="hotel-rating-text">Рейтинг: 8,9</span>
                       </div>
-                      <div class="separate-line"></div> 
+                      
                   </li>
                   <li class="search-results-item">
                     <img class="hotel-image" src="img/VillasAtPocoDiablo.jpg" width="135" height="90" alt="Villas at Poco Diablo">
@@ -152,7 +155,6 @@
                     <div class="hotel-rating">
                         <span class="hotel-rating-text">Рейтинг: 9,2</span>
                     </div>
-                    <div class="separate-line"></div> 
                   </li>
               </ul>
             </section>

@@ -12,6 +12,7 @@
   --rating-text: #666666;
   --items-background: #EEEEEE;
   --image-background: #9EB0B5;
+  --separate-line: #E5E5E5;
   
   --brown-hover: #604E43;
   --brown-focus: #503E33;
@@ -74,6 +75,10 @@ img {
 	line-height: 26px;
 	font-weight: 700;
 	background-color: var(--basic-white);
+}
+
+.header-container {
+	position: relative;
 }
 
 .navigation-list, .features-list,
@@ -519,11 +524,67 @@ input.number:focus {
 
 .search-form {
 	background-image: url("../img/catalog_background.jpg");
-	outline: 1px dashed #cfab49;		
+	/* outline: 1px dashed #cfab49;		 */
+	padding: 0 72px;
+	display: grid;
+	grid-template-columns: repeat(3, auto);
+}
+
+.field {
+	text-align: left;
+	margin: 0;
+	margin: 23.5px 0px;
+	border: none;
+}
+
+.criteria-title {
+	font-weight: bold;
+	font-size: 16px;
+	color: var(--basic-white);
+}
+
+.criteria-label {
+	display: block;
+	position: relative;
+	padding-left: 40px;
+	margin-top: 24px;
+	color: var(--basic-white);
+}
+
+.criteria-label input {
+	position: absolute;
+	opacity: 0;
+}
+
+.checkmark {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 23px;
+	width: 27px;
+	background-image: url(../img/checkbox-off.svg);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
+.criteria-label input:disabled ~ .checkmark {
+	background-image: url(../img/checkbox-blocked-off.svg);
+}
+
+.criteria-label input:checked:disabled ~ .checkmark {
+	background-image: url(../img/checkbox-blocked--on.svg);
+}
+
+.criteria-label input:checked ~ .checkmark {
+	background-image: url(../img/checkbox-on.svg);
+}
+
+.show-button {
+	/* background-image: url(../img/show-button.svg); */
 }
 
 .search-results {
-	padding: 0 73px;
+	padding: 0;
 }
 
 .search-results-list {
@@ -531,70 +592,76 @@ input.number:focus {
 }
 
 .search-results-header{
-	outline: 1px solid blue;
+	/* outline: 1px solid blue; */
 	margin: 0;
 }
 
 .search-results-item {
 	text-align: left;
-	margin-top: 30px;
+	padding-top: 23.5px;
+	padding-bottom: 30px;
+	border-top: 1px solid var(--separate-line);
 	display: grid;
 	grid-template-areas: 
 	"im name name stars"
 	"im type price ."
-	"im details book rating"
-	"l l l l";
-	grid-template-columns: 135px 139px auto 110px;
+	"im details book rating";
+	grid-template-columns: auto min-content 1fr 183px;
+	column-gap: 6px;
+	row-gap: 7px;
+}
+
+.search-results-item:last-child {
+	padding-bottom: 30px;
+	border-bottom: 1px solid var(--separate-line);	
 }
 
 .hotel-image {
-	margin-top: 30px;
+	padding-top: 8.5px;
+	padding-left: 73px;
+	padding-right: 23px;
 	grid-area: im;
-	width: 100%;
+	width: auto;
 }
 
 .hotel-name {
-	margin-top: 23.5px;
-	margin-bottom: 0px;
+	margin: 0px;
 	grid-area: name;	
-	padding-left: 29px;
 }
 
 .hotel-rating {
 	background-color: var(--input-number);
-	margin-top: 15.5px;
-	padding: 3px auto;
+	margin-right: 73px;
 	text-align: center;
 	grid-area: rating;
 }
 
+.hotel-rating-text {
+	display: inline-block;
+	/* vertical-align: middle; */
+}
+
 .hotel-type {
 	grid-area: type;
-	margin-top: 7px;
-	margin-left: 29px;
+	padding-bottom: 8.5px;
 }
 
 .hotel-price {
-	margin-top: 7px;
 	grid-area: price;
-	margin-left: 6px;
 }
 
 .hotel-book-button {
-	margin-top: 15.5px;
 	grid-area: book;
-	margin-left: 6px;
+	padding: 0px;
 }
 
 .hotel-details-button {
-	margin-top: 15.5px;
 	grid-area: details;
-	padding-left: 29px;
 }
 
 .hotel-stars {
-	margin-top: 29px;
 	text-align: right;
+	margin-right: 73px;
 	display: inline-block;
 	font-size: 0;
 	grid-area: stars;
@@ -609,11 +676,4 @@ input.number:focus {
 
 .hotel-stars > span:before {
 	content: '★';
-}
-
-.separate-line {
-	margin-top: 30px;
-	grid-area: l;
-	height: 1px;
-	background-image: url(../img/separate_line.svg);
 }
