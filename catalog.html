@@ -22,8 +22,9 @@
       </a>
       <nav class="main-navigation">
         <ul class="navigation-list">
-          <li class="navigation-item"><a href="index.html">Информация</a></li>
+          <li class="navigation-item"><a href="info.html">Информация</a></li>
           <li class="navigation-item"><a href="media.html">Фото и видео</a></li>
+          <li class="hidden-navigation-item"></li>
           <li class="navigation-item"><a href="map.html">Карта штата</a></li>
           <li class="navigation-item active">Гостиницы</li>
         </ul>
@@ -68,25 +69,17 @@
             </fieldset>
 
             <fieldset class="price-field field">
-              <legend class="criteria-title">Стоимость в сутки (Р):</legend>
-              <div>
-                <label style="text-transform: uppercase;">
-                  от
-                  <input type="number" min="0" max="3000" value="0">
-                </label>
-                <label style="text-transform: uppercase;">
-                  До
-                  <input type="number" min="0" max="3000" value="3000">
-                </label>
-              </div>
-              <div>
-                <!--выбор цены-->
-              </div>
-              <button class="show-button" type="submit">
-                  <svg width="137" height="36" viewBox="0 0 137 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <rect x="1" y="1" width="135" height="34" rx="1" stroke="white" stroke-width="2"/>
-                  </svg>            
-              </button>
+                <legend class="criteria-title">Стоимость в сутки (Р):</legend>
+                <div class="price-range-input">
+                    <label style="text-transform: uppercase;">от
+                        <input type="number" min="0" max="3000" value="0">
+                    </label>
+                    <label style="text-transform: uppercase;">до
+                        <input type="number" min="0" max="3000" value="3000">
+                    </label>
+                </div>
+                <div class="price-markers">Маркеры цены</div>
+                <button class="show-button" type="submit">Показать</button>
             </fieldset>
             
           </form>

@@ -24,8 +24,9 @@
       </a>
       <nav class="main-navigation">
         <ul class="navigation-list">
-          <li class="navigation-item active">Информация</li>
+          <li class="navigation-item"><a href="info.html">Информация</a></li>
           <li class="navigation-item"><a href="media.html">Фото и видео</a></li>
+          <li class="hidden-navigation-item"></li>
           <li class="navigation-item"><a href="map.html">Карта штата</a></li>
           <li class="navigation-item"><a href="catalog.html">Гостиницы</a></li>
         </ul>
@@ -102,39 +103,42 @@
         <h2 class="hidden">Забронировать гостиницу в Седоне</h2>
         <p class="bottom-title">Заинтересовались?</p>
         <p class="bottom-title-text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
+        <div class="search-form-main-page">
+            <h2 class="hidden">Поиск гостиницы в Седоне</h2>
+            <input class="top-search-button" type="button" value="Поиск гостиницы в Седоне">
+    
+            <section class="bottom-search-form">
+                <label class="start-date-label" for="start">Дата заезда:
+                    <input class="date-input number" type="date" id="start" value="2017-04-23">
+                </label>
+                <label class="finish-date-label" for="finish">Дата выезда:
+                    <input class="date-input number" type="date" id="finish" value="2017-07-4">
+                </label>
+                <label class="search-adults-label" for="adults">Взрослые:
+                    <input class="guests-number number" type="number" id="adults" value="2">
+                </label>
+                <label class="search-children-label" for="children">Дети:
+                    <input class="guests-number number" type="number" id="children" value="0"> 
+                </label>
+                <input class="search-button" type="submit" value="Найти">
+          </section>
+        </div>
       </section>
 
       <figure class="image-map">
         <img src="img/map.png" width="1199" height="579" alt="Карта">
       </figure>
 
-      <div class="search-form hidden">
-        <h2 class="hidden">Поиск гостиницы в Седоне</h2>
-        <input class="top-search-button" type="button" value="Поиск гостиницы в Седоне">
-
-        <section class="bottom-search-form">
-          <label class="start-date-label" for="start">Дата заезда:</label>
-            <input class="date-input number" type="date" id="start" value="2017-04-23">
-          <label class="finish-date-label" for="finish">Дата выезда:</label>
-            <input class="date-input number" type="date" id="finish" value="2017-07-4">
-          <label class="search-adults-label" for="adults">Взрослые:</label>
-            <input class="guests-number number" type="number" id="adults" value="2">
-          <label class="search-children-label" for="children">Дети:</label>
-            <input class="guests-number number" type="number" id="children" value="0"> 
-          <input class="search-button" type="submit" value="Найти">
-        </section>
-      </div>
-
     </main>
 
     <footer class="footer-container">
-      <div class="contacts title-style">
+      <div class="contacts-container title-style">
         <h2 class="hidden">Контакты</h2>
         <p class="contacts-text">#VISITSEDONA</p>
         <p class="contacts-text">тел: +7(495) 666-01-66</p>
       </div>
 
-      <div class="socials">
+      <div class="socials-container">
         <h2 class="hidden">Соц.сети</h2>
         <ul class="social-list">
           <li class="social-item">
