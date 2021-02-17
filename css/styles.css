@@ -166,6 +166,7 @@ img {
 }
 
 .block-center {
+	position: relative;
 	margin: 0 340px;
 	line-height: 26px;
 }
@@ -184,20 +185,12 @@ img {
 	flex-wrap: wrap;
 }
 
-.feature-1 {
-	
-}
-
 .image-1 {
 	background-color: var(--image-background);
 }
 
 .image-2 {
 	background-color: var(--image-background);	
-}
-
-.feature-2 {
-
 }
 
 .image img{
@@ -279,15 +272,22 @@ img {
 
 .bottom-title-text {
 	line-height: 24px;
+	margin-bottom: 110px;
+}
+
+.search-form-main-page{
+	position: absolute;
+	top: 205px;
+	width: 568px;
+	line-height: 26px;
+	font-weight: 700;
 }
 
 .top-search-button {
 	width: 100%;
 	padding: 30px 0px;
-	text-transform: uppercase;
-	font-weight: 700;
 	font-size: 21px;
-	line-height: 26px;
+	text-transform: uppercase;
 	color: var(--basic-white);
 	background-color: var(--basic-brown);
 	border: none;
@@ -303,29 +303,41 @@ img {
 }
 
 .bottom-search-form {
+	background-color: var(--basic-white);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 55px;
 	font-weight: 700;
-	font-size: 14px;
-	line-height: 26px;
 }
 
-input.number {
+.search-input {
+	border: 0;
 	background-color: var(--input-number);
+	margin-bottom: 30px;
+	line-height: 26px;
+	font-weight: 700;
+	padding: 6px 0px;
 }
 
-input.number:hover {
+.search-input:hover {
 	background-color: var(--input-number-hover);
 }
 
-input.number:focus {
+.search-input:focus {
 	background-color: var(--basic-white);
+}
+
+.search-text-label {
+	padding: 6px 0px;
 }
 
 .date-input {
 	width: 346px;
 	font-weight: 700;
 	line-height: 26px;
-	padding: 6px 0px;
 	padding-left: 13px;
+	box-sizing: border-box;
 }
 
 .search-button {
@@ -406,19 +418,6 @@ input.number:focus {
 	border: 0;
 }
 
-.search-form-main-page{
-	position: absolute;
-	width: 568px;
-}
-
-.bottom-search-form {
-	background-color: var(--basic-white);
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	;
-}
-
 .image-map {
 	margin: 0;
 }
@@ -430,10 +429,6 @@ input.number:focus {
 	/* margin: 0 73px; */
 }
 
-.contacts-container {
-	
-}
-
 .socials-container {
 	display: block;
 }
@@ -441,9 +436,6 @@ input.number:focus {
 .academy-link-container {
 	display: inline-flex;
 	align-items: center;
-}
-
-.contacts-text {
 }
 
 .social-list {
@@ -504,10 +496,6 @@ input.number:focus {
 	margin-right: 8px;
 }
 
-.academy-link-logo {
-	
-}
-
 .academy-logo {
 	fill: var(--ordinary-text);
 }
@@ -521,18 +509,23 @@ input.number:focus {
 /* CATALOG */
 
 .search-form {
-	background-image: url("../img/catalog_background.jpg");
-	/* outline: 1px dashed #cfab49;		 */
+	background: url("../img/catalog_background.jpg");
+	background-size: cover;
+	color: var(--basic-white);
 	padding: 0 72px;
-	display: grid;
-	grid-template-columns: 1fr 1fr 2fr;
+	display: flex;
+	justify-content: space-between;
 }
 
 .field {
 	text-align: left;
+	padding: 0;
 	margin: 0;
 	margin: 23.5px 0px;
 	border: none;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .criteria-title {
@@ -543,7 +536,6 @@ input.number:focus {
 }
 
 .criteria-label {
-	display: block;
 	position: relative;
 	padding-left: 40px;
 	margin-top: 24px;
@@ -581,11 +573,11 @@ input.number:focus {
 .price-field {
 	padding-left: 210px;
 	padding-right: 73px;
-	
 }
 
 .price-range-input {
 	outline: 1px solid seagreen;
+	margin-top: 10.5px;
 }
 
 .show-button {
@@ -605,11 +597,62 @@ input.number:focus {
 
 .search-results-list {
 	padding-inline-start: 0;
+	display: flex;
+	flex-direction: column;
 }
 
-.search-results-header{
-	/* outline: 1px solid blue; */
-	margin: 0;
+.search-results-header {
+	margin: 0 73px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.number-searched {
+	font-weight: bold;
+	font-size: 21px;
+	line-height: 26px;
+	margin: 29px 0;
+}
+
+.sort-type {
+	display: flex;
+}
+
+.sort-type-text {
+	margin-right: 40px;
+}
+
+.sort-type-label {
+	position: relative;
+	margin: 0 20px;
+	font-size: 12px;
+	line-height: 18px;
+	opacity: 0.3;	
+}
+
+.sort-type-label > span{
+	display: block;
+	border-bottom: 1px dashed var(--basic-blue);
+}	
+
+.sort-type-label input:checked + span{
+	color: var(--basic-blue);
+	opacity: 1;
+	border-bottom: none;
+}
+
+.sort-type-label input {
+	position: absolute;
+	opacity: 0;
+}
+
+.sort-type-label:hover{
+	color: var(--basic-blue);
+}
+
+.sort-type-label:focus {
+	color: var(--title-text);
 }
 
 .search-results-item {
@@ -617,14 +660,15 @@ input.number:focus {
 	padding-top: 23.5px;
 	padding-bottom: 30px;
 	border-top: 1px solid var(--separate-line);
-	display: grid;
+	/* display: grid;
 	grid-template-areas: 
 	"im name name stars"
 	"im type price ."
 	"im details book rating";
 	grid-template-columns: auto min-content 1fr 183px;
 	column-gap: 6px;
-	row-gap: 7px;
+	row-gap: 7px; */
+	display: flex;
 }
 
 .search-results-item:last-child {
@@ -636,30 +680,27 @@ input.number:focus {
 	padding-top: 8.5px;
 	padding-left: 73px;
 	padding-right: 23px;
-	grid-area: im;
 	width: auto;
+}
+
+.hotel-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.two-hotel-button {
+	display: flex;
+}
+
+.hotel-type {
+	display: inline-block;
+	width: 110px;
+	margin-right: 6px;
 }
 
 .hotel-name {
 	margin: 0px;
-	grid-area: name;	
-}
-
-.hotel-rating {
-	background-color: var(--input-number);
-	margin-right: 73px;
-	text-align: center;
-	grid-area: rating;
-}
-
-.hotel-rating-text {
-	display: inline-block;
-	/* vertical-align: middle; */
-}
-
-.hotel-type {
-	grid-area: type;
-	padding-bottom: 8.5px;
 }
 
 .hotel-price {
@@ -672,15 +713,32 @@ input.number:focus {
 }
 
 .hotel-details-button {
-	grid-area: details;
+	margin-right: 6px;
+}
+
+.stars-rating-block {
+	width: 632px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.hotel-rating {
+	background-color: var(--input-number);
+	text-align: center;
+	align-self: flex-end;
+}
+
+.hotel-rating-text {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 3px 12px;
 }
 
 .hotel-stars {
 	text-align: right;
-	margin-right: 73px;
 	display: inline-block;
 	font-size: 0;
-	grid-area: stars;
 }
 
 .hotel-stars span {
