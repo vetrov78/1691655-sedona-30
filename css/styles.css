@@ -23,6 +23,7 @@
   --input-number: #F2F2F2;
   --input-number-hover: #EBEBEB;
   --academy-logo-focus: #BDBBBC;
+  --toggle-inside: #ABABAB;
 }
 
 /* GLOBAL */
@@ -521,8 +522,8 @@ img {
 	text-align: left;
 	padding: 0;
 	margin: 0;
-	margin: 23.5px 0px;
 	border: none;
+	margin: 23.5px 0px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -573,11 +574,45 @@ img {
 .price-field {
 	padding-left: 210px;
 	padding-right: 73px;
+	width: 317px;
 }
 
 .price-range-input {
 	outline: 1px solid seagreen;
 	margin-top: 10.5px;
+}
+
+.range-controls {
+	position: relative;
+	outline: 1px solid white;
+	padding: 30px 0px;
+}
+
+.range-controls .scale {
+	height: 3px;
+	background: var(--white-opacity);	
+	
+}
+
+.range-controls .bar {
+	height: 3px;
+	background: var(--basic-white);
+	width: 70%;	
+}
+
+.toggle {
+	position: absolute;
+	top: 22px;
+	left: 0px;;
+	width: 3.8px;
+	height: 3.8px;
+	background-color: var(--toggle-inside);
+	border: 7.64px solid var(--basic-white);
+	border-radius: 50%;
+}
+
+.toggle-max {
+	left: 253px;
 }
 
 .show-button {
