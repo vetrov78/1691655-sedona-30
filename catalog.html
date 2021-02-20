@@ -70,21 +70,28 @@
 
               <fieldset class="price-field field">
                   <legend class="criteria-title">Стоимость в сутки (Р):</legend>
-                  <div class="price-range-input">
+                  <div class="price-controls">
                       <label class="min-price">от
-                          <input type="number" name="min-price" min="0" max="3000" value="0">
+                          <input type="text" name="min-price" size="5" min="0" max="3000" value="0">
                       </label>
                       <label class="max-price">до
-                          <input type="number" name="max-price" min="0" max="3000" value="3000">
+                          <input type="text" name="max-price" size="5" min="0" max="3000" value="3000">
                       </label>
                   </div>
                   
                   <div class="range-controls">
                       <div class="scale">
-                          <div class="bar"></div>
+                          <div  class="bar" 
+                                style=" width: 70%;
+                                        margin-left: 0%; ">
+                          </div>
                       </div>
-                      <div class="toggle toggle-min"></div>
-                      <div class="toggle toggle-max"></div>
+                      <div class="toggle toggle-min" tabindex="0"
+                            style="left:0%">
+                      </div>
+                      <div class="toggle toggle-max" tabindex="0"
+                            style="left:70%">
+                      </div>
                   </div>
                   <button class="show-button" type="submit">Показать</button>
               </fieldset>
