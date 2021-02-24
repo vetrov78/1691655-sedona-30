@@ -3,6 +3,7 @@
 :root {
   --basic-white: #FFFFFF;
   --white-opacity: rgba(255, 255, 255, 0.3);
+  --footer-background: rgba(255, 255, 255, 0.9);
   --basic-brown: #766357;
   --basic-blue: #81B3D2;
   --basic-gray:#888888;
@@ -84,16 +85,22 @@ p {
 }
 
 .main-container {
-	padding-bottom: 120px; /* height of footer */
 	background-color: var(--basic-white);
 }
 
 .footer-container {
 	/* border: 1px dashed red; */
 	position: relative;
-	top: -120px;
+	z-index: 1;
+	background-color: var(--footer-background);
+	bottom: 120px;
 	height: 120px;
 	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-start; 
+	padding: 0 73px;
+	box-sizing: border-box;
 }
 
 .navigation-list, .features-list,
@@ -231,7 +238,7 @@ p {
 	width: 519px;
 }
 
-.inner-grid{
+.inner-flex{
 	display: flex;
 	flex-wrap: wrap;
 }
@@ -490,11 +497,14 @@ section[class*="illustrated"] {
 	margin: 0;
 }
 
-.main-footer {
-	display: flex;
-	justify-content: space-around;
-	align-items: center; 
-	margin: 0 73px;
+/* FOOTER */
+
+.contacts-container {
+	padding-top: 23px;
+}
+
+.contacts-text {
+	margin-bottom: 9px;
 }
 
 .socials-container {
@@ -515,6 +525,10 @@ section[class*="illustrated"] {
 .social-item {
 	display: inline;
 	margin-right: 6px;
+}
+
+.social-item:last-child {
+	margin-right: 0;
 }
 
 .twitter-icon {
