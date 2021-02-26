@@ -14,16 +14,17 @@
   --items-background: #EEEEEE;
   --image-background: #9EB0B5;
   --separate-line: #E5E5E5;
+  --calendar-fill: #A9A9A9;
   
   --brown-hover: #604E43;
-  --brown-focus: #503E33;
+  --brown-active: #503E33;
 
   --blue-hover: #669EC0;
-  --blue-focus: #5496BD;
+  --blue-active: #5496BD;
 
   --input-number: #F2F2F2;
   --input-number-hover: #EBEBEB;
-  --academy-logo-focus: #BDBBBC;
+  --academy-logo-active: #BDBBBC;
   --toggle-inside: #ABABAB;
 }
 
@@ -50,8 +51,8 @@ p {
   }
 
 .page {
-	background-color: var(--basic-gray);
-	height: 100%;
+	background: #FFFFFF;
+	height: 100%;	
 }
 
 .page-body {
@@ -69,6 +70,9 @@ p {
 	text-transform: uppercase;
 	color: var(--ordinary-text);
 	background-color: var(--basic-white);
+	display: grid;
+	grid-template-rows: min-content 1fr min-content;
+	box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
 }
 
 .title-style {
@@ -84,9 +88,9 @@ p {
 	font-weight: 700;
 }
 
-.main-container {
+/* .main-container {
 	background-color: var(--basic-white);
-}
+} */
 
 .navigation-list, .features-list,
 .search-result {
@@ -138,7 +142,7 @@ p {
 .navigation-item a:hover {
 	color: var(--basic-blue);
 }
-.navigation-item a:focus {
+.navigation-item a:active {
 	opacity: 0.3;
 }
 .navigation-item.active {
@@ -236,10 +240,6 @@ p {
 section.f2 {
 	padding: 0px 49px;
 	padding-top: 50px;
-}
-
-section.f3 {
-
 }
 
 .feature-number {
@@ -357,8 +357,8 @@ section[class*="illustrated"] {
 	background-color: var(--brown-hover);
 }
 
-.top-search-button:focus {
-	background-color: var(--brown-focus);
+.top-search-button:active {
+	background-color: var(--brown-active);
 	color: var(--white-opacity);
 }
 
@@ -374,7 +374,6 @@ section[class*="illustrated"] {
 		"s s s s";
 	row-gap: 30px;
 	padding: 55px;
-	line-height: 26px;
 	font-weight: 700;
 }
 
@@ -385,13 +384,17 @@ section[class*="illustrated"] {
 .bottom-search-form input {
 	border: none;
 	background-color: var(--input-number);
+	font-weight: 700;
+	line-height: 26px;
+	text-transform: uppercase;
+	position: relative;
 }
 
 .bottom-search-form input:hover {
 	background-color: var(--input-number-hover);
 }
 
-.bottom-search-form input:focus {
+.bottom-search-form input:active {
 	background-color: var(--basic-white);
 }
 
@@ -407,10 +410,36 @@ section[class*="illustrated"] {
 
 .check-in-date {
 	grid-area: d1;
+	padding-left: 13px;
+	position: relative;
 }
 
 .check-out-date {
 	grid-area: d2;
+	padding-left: 13px;
+}
+
+.calendar-icon {
+	position: absolute;
+	fill: var(--calendar-fill);
+}
+
+.calendar-icon:hover {
+	fill: var(--title-text);
+}
+
+.calendar-icon:active {
+	fill: var(--basic-blue);
+}
+
+.pos-1 {
+	bottom: 310px;
+	left: 482px;
+}
+
+.pos-2 {
+	bottom: 242px;
+	left: 482px;
 }
 
 .adults-label {
@@ -420,14 +449,17 @@ section[class*="illustrated"] {
 
 .adults-number {
 	grid-area: n1;
+	text-align: center;
 }
 
 .children-label {
 	grid-area: l4;
+	margin-right: -23px;
 }
 
 .children-number {
 	grid-area: n2;
+	text-align: center;
 }
 
 .before-button-row {
@@ -451,8 +483,8 @@ input.search-button:hover {
 	background-color: var(--blue-hover);
 }
 
-input.search-button:focus {
-	background-color: var(--blue-focus);
+input.search-button:active {
+	background-color: var(--blue-active);
 	color: var(--white-opacity);
 }
 
@@ -479,8 +511,8 @@ input.search-button:focus {
 	background-color: var(--blue-hover);
 }
 
-.detail-button:focus {
-	background-color: var(--blue-focus);
+.detail-button:active {
+	background-color: var(--blue-active);
 	color: var(--white-opacity);
 }
 
@@ -499,8 +531,8 @@ input.search-button:focus {
 	background-color: var(--brown-hover);
 }
 
-.hotel-book-button:focus {
-	background-color: var(--brown-focus);
+.hotel-book-button:active {
+	background-color: var(--brown-active);
 	color: var(--white-opacity);
 }
 
@@ -513,8 +545,9 @@ input.search-button:focus {
 	border: 0;
 }
 
-.image-map {
-	margin: 0;
+.image-map img{
+	display: block;
+	width: 100%;
 }
 
 /* FOOTER */
@@ -523,7 +556,7 @@ input.search-button:focus {
 	position: relative;
 	z-index: 1;
 	background-color: var(--footer-background);
-	bottom: 125px;
+	bottom: 0px;
 	height: 120px;
 	width: 100%;
 	display: grid;
@@ -531,6 +564,10 @@ input.search-button:focus {
 	align-items: center;
 	padding: 0 73px;
 	box-sizing: border-box;
+}
+
+.footer-up {
+	margin-top: -120px;
 }
 
 .contacts-container {
@@ -565,8 +602,8 @@ input.search-button:focus {
 .twitter-icon:hover {
 	background-color: var(--blue-hover);
 }
-.twitter-icon:focus {
-	background-color: var(--blue-focus);
+.twitter-icon:active {
+	background-color: var(--blue-active);
 	fill: var(--basic-white);
 	fill-opacity: 0.3;
 }
@@ -579,8 +616,8 @@ input.search-button:focus {
 .facebook-icon:hover {
 	background-color: var(--blue-hover);
 }
-.facebook-icon:focus {
-	background-color: var(--blue-focus);
+.facebook-icon:active {
+	background-color: var(--blue-active);
 	fill: var(--basic-white);
 	fill-opacity: 0.3;
 }
@@ -593,8 +630,8 @@ input.search-button:focus {
 .youtube-icon:hover {
 	background-color: var(--blue-hover);
 }
-.youtube-icon:focus {
-	background-color: var(--blue-focus);
+.youtube-icon:active {
+	background-color: var(--blue-active);
 	fill: var(--basic-white);
 	fill-opacity: 0.3;
 }
@@ -616,27 +653,30 @@ input.search-button:focus {
 .academy-logo:hover {
 	fill: var(--basic-blue);
 }
-.academy-logo:focus {
-	fill: var(--academy-logo-focus);
+.academy-logo:active {
+	fill: var(--academy-logo-active);
 }
 
 /* CATALOG */
 
-.search-form {
+.catalog-search-form {
 	background: url("../img/catalog_background.jpg");
 	background-size: cover;
 	color: var(--basic-white);
-	padding: 0 72px;
+	height: 217px;
+	box-sizing: border-box;
+	padding: 25px 72px;
+	padding-bottom: 33px;
 	display: flex;
 	justify-content: space-between;
 }
 
 .field {
 	text-align: left;
-	padding: 0;
 	margin: 0;
+	padding: 0;
+	padding-top: 26px;
 	border: none;
-	margin: 23.5px 0px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -652,7 +692,6 @@ input.search-button:focus {
 .criteria-label {
 	position: relative;
 	padding-left: 40px;
-	margin-top: 24px;
 	color: var(--basic-white);
 }
 
@@ -727,7 +766,6 @@ input.search-button:focus {
 
 .range-controls {
 	position: relative;
-	padding: 30px 0px;
 }
 
 .range-controls .scale {
@@ -839,7 +877,7 @@ input.search-button:focus {
 	color: var(--basic-blue);
 }
 
-.sort-type-label:focus {
+.sort-type-label:active {
 	color: var(--title-text);
 }
 
