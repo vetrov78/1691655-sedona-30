@@ -52,15 +52,16 @@ p {
   }
 
 .page {
-	background: #FFFFFF;
-	height: 100%;	
+	background: var(--input-number);
+	height: 100%;
+
 }
 
 .page-body {
 	position: relative;
 	min-width: 1200px;
 	width: 1200px;
-	height: 100%;
+	min-height: 100%;
 	margin: 0 auto;
 	padding: 0;
 	text-align: center;
@@ -87,6 +88,8 @@ p {
 .header-container {
 	line-height: 26px;
 	font-weight: 700;
+	box-shadow: -15px 0px 0px -15px rgba(0, 1, 1, 0.2);
+	box-shadow: -15px 0px 0px -15px rgba(0, 1, 1, 0.2);
 }
 
 /* .main-container {
@@ -212,7 +215,8 @@ p {
 	line-height: 26px;
 	display: flex;
 	flex-direction: column;
-	align-items: center
+	align-items: center;
+	background-color: var(--basic-white);
 }
 
 .top-title {
@@ -271,6 +275,7 @@ section[class*="illustrated"] {
 	height: min-content;
 	padding: 55px 55px;
 	padding-bottom: 81px;
+	background-color: var(--basic-white	);
 }
 
 .ordinary {
@@ -363,6 +368,7 @@ section[class*="illustrated"] {
 }
 
 .bottom-search-form {
+	position: relative;
 	background-color: var(--basic-white);
 	display: grid;
 	grid-template-columns: 112px 114px auto 114px;
@@ -390,12 +396,13 @@ section[class*="illustrated"] {
 	position: relative;
 }
 
-.bottom-search-form input:hover {
+input[class*="date"]:hover {
 	background-color: var(--input-number-hover);
 }
 
-.bottom-search-form input:active {
+input[class*="date"]:focus {
 	background-color: var(--basic-white);
+	outline: 2px solid var(--separate-line);
 }
 
 .check-in-label {
@@ -450,6 +457,42 @@ section[class*="illustrated"] {
 .adults-number {
 	grid-area: n1;
 	text-align: center;
+}
+
+.minus-sign-1 {
+	position: absolute;
+	top: 210px;
+	left: 175px;
+}
+
+.minus-sign-2 {
+	position: absolute;
+	top: 210px;
+	left: 410px;
+}
+
+.plus-sign-1 {
+	position: absolute;
+	top: 206px;
+	left: 257px;
+}
+
+.plus-sign-2 {
+	position: absolute;
+	top: 206px;
+	left: 490px;
+}
+
+svg[class*="sign"] {
+	fill: var(--calendar-fill);
+}
+
+svg[class*="sign"]:hover {
+	fill: var(--title-text);
+}
+
+svg[class*="sign"]:active {
+	fill: var(--basic-blue);
 }
 
 .children-label {
@@ -518,7 +561,6 @@ input.search-button:active {
 
 .hotel-book-button {
 	width: 142px;
-	/* padding: 3px 0px; */
 	font-weight: 700;
 	line-height: 21px;
 	text-transform: uppercase;
