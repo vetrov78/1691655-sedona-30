@@ -65,7 +65,7 @@ p {
 	margin: 0 auto;
 	padding: 0;
 	text-align: center;
-	font-family: "PT Sans", sans-serif;
+	font-family: "PT Sans", Arial, sans-serif;
 	font-size: 14px;
 	line-height: 21px;
 	font-weight: 400;
@@ -173,6 +173,7 @@ p {
 	z-index: 0;
 	width: 100%;
 	max-height: inherit;
+	background-color: var(--basic-blue);
 }
 
 .welcome-image::after {
@@ -636,42 +637,18 @@ input.search-button:active {
 	margin-right: 0;
 }
 
-.twitter-icon {
-	display: inline-block;
+.twitter-icon, .facebook-icon, .youtube-icon {
+	/* display: inline-block; */
 	background-color: var(--basic-blue);
 	fill: white;
 }
-.twitter-icon:hover {
-	background-color: var(--blue-hover);
-}
-.twitter-icon:active {
-	background-color: var(--blue-active);
-	fill: var(--basic-white);
-	fill-opacity: 0.3;
-}
 
-.facebook-icon {
-	display: inline-block;
-	background-color: var(--basic-blue);
-	fill: white;	
-}
-.facebook-icon:hover {
-	background-color: var(--blue-hover);
-}
-.facebook-icon:active {
-	background-color: var(--blue-active);
-	fill: var(--basic-white);
-	fill-opacity: 0.3;
-}
-
-.youtube-icon {
-	display: inline-block;
-	background-color: var(--basic-blue);
-	fill: white;	
-}
+.twitter-icon:hover, .facebook-icon:hover, 
 .youtube-icon:hover {
 	background-color: var(--blue-hover);
 }
+
+.twitter-icon:active, .facebook-icon:active,
 .youtube-icon:active {
 	background-color: var(--blue-active);
 	fill: var(--basic-white);
@@ -788,7 +765,7 @@ input.search-button:active {
 }
 
 .price-controls label {
-	display: inline-block;
+	/* display: inline-block; */
 	height: 22px;
 }
 
@@ -995,14 +972,15 @@ input.search-button:active {
 	border-bottom: 1px solid var(--separate-line);	
 }
 
-.hotel-image {
+.hotel-image-container {
 	padding-top: 8.5px;
 	width: auto;
 	margin-right: 29px;
 }
 
-.hotel-image img {
+.hotel-image-container img {
 	display: block;
+	background-color: var(--image-background);
 }
 
 .hotel-info {
@@ -1017,6 +995,7 @@ input.search-button:active {
 
 .hotel-type {
 	display: inline-block;
+	vertical-align: middle;
 	width: 110px;
 	margin-right: 2px;
 }
@@ -1069,7 +1048,6 @@ input.search-button:active {
 
 .hotel-stars {
 	text-align: right;
-	display: inline-block;
 	font-size: 0;
 }
 
