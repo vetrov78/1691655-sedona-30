@@ -542,10 +542,12 @@ input.search-button:active {
 	padding: 3px 0px;
 	font-weight: 700;
 	line-height: 21px;
+	text-align: center;
 	text-transform: uppercase;
 	background-color: var(--basic-blue);
 	color: var(--basic-white);
 	border: none;
+	margin-right: 6px;
 }
 
 .detail-button:hover {
@@ -969,15 +971,11 @@ input.search-button:active {
 	border-bottom: 1px solid var(--separate-line);	
 }
 
-.hotel-image-container {
-	padding-top: 8.5px;
-	width: auto;
+.hotel-image {
+	margin-top: 8.5px;
 	margin-right: 29px;
-}
-
-.hotel-image-container img {
-	display: block;
-	background-color: var(--image-background);
+	background-color: var(--basic-blue);
+	object-fit: cover;
 }
 
 .hotel-info {
@@ -1018,10 +1016,6 @@ input.search-button:active {
 .hotel-book-button {
 	grid-area: book;
 	padding: 0px;
-}
-
-.hotel-details-button {
-	margin-right: 6px;
 }
 
 .stars-rating-block {
