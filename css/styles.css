@@ -559,16 +559,6 @@ input.search-button:active {
 	color: var(--white-opacity);
 }
 
-.hotel-book-button {
-	width: 142px;
-	font-weight: 700;
-	line-height: 21px;
-	text-transform: uppercase;
-	background-color: var(--basic-brown);
-	color: var(--basic-white);
-	border: none;
-}
-
 .hotel-book-button:hover {
 	background-color: var(--brown-hover);
 }
@@ -1041,6 +1031,13 @@ input:focus {
 .hotel-book-button {
 	grid-area: book;
 	padding: 0px;
+	width: 142px;
+	font-weight: 700;
+	line-height: 21px;
+	text-transform: uppercase;
+	background-color: var(--basic-brown);
+	color: var(--basic-white);
+	border: none;
 }
 
 .stars-rating-block {
