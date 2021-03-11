@@ -548,6 +548,7 @@ input.search-button:active {
 	color: var(--basic-white);
 	border: none;
 	margin-right: 6px;
+	overflow-wrap: anywhere;
 }
 
 .detail-button:hover {
