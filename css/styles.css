@@ -764,7 +764,6 @@ input.search-button:active {
 }
 
 .price-controls label {
-	/* display: inline-block; */
 	height: 22px;
 }
 
@@ -775,6 +774,20 @@ input.search-button:active {
 	padding: 0;
 	border: none;
 	color: var(--basic-white);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0; 
+}
+
+input[type=number] {
+    -moz-appearance:textfield; 
+}
+
+input:focus {
+	outline: none;
 }
 
 .max-price {
