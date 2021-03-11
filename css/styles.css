@@ -678,7 +678,8 @@ input.search-button:active {
 /* CATALOG */
 
 .catalog-search-form {
-	background: url("../img/catalog_background.jpg");
+	background: var(--image-background);
+	position: relative;
 	background-size: cover;
 	color: var(--basic-white);
 	height: 217px;
@@ -687,6 +688,16 @@ input.search-button:active {
 	padding-bottom: 33px;
 	display: flex;
 	justify-content: space-between;
+}
+
+.catalog-background-image {
+	pointer-events: none;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 0;
 }
 
 .field {
@@ -698,6 +709,7 @@ input.search-button:active {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	z-index: 0;
 }
 
 .infrastructure-field {
