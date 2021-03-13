@@ -537,47 +537,38 @@ input.search-button:active {
 	padding-left: 13px;
 }
 
-.detail-button {
-	width: 110px;
+a[class*='button'] {
 	padding: 3px 0px;
 	font-weight: 700;
 	line-height: 21px;
 	text-align: center;
 	text-transform: uppercase;
-	background-color: var(--basic-blue);
-	color: var(--basic-white);
 	border: none;
-	margin-right: 6px;
+	color: var(--basic-white);
 	overflow-wrap: anywhere;
 }
 
+.detail-button {
+	width: 110px;
+	background-color: var(--basic-blue);
+	margin-right: 6px;
+	
+}
 .detail-button:hover {
 	background-color: var(--blue-hover);
 }
-
 .detail-button:active {
 	background-color: var(--blue-active);
 	color: var(--white-opacity);
 }
 
-
 .hotel-book-button {
-	grid-area: book;
-	padding: 0px;
 	width: 142px;
-	font-weight: 700;
-	line-height: 21px;
-	text-transform: uppercase;
 	background-color: var(--basic-brown);
-	color: var(--basic-white);
-	border: none;
-	cursor: pointer;
 }
-
 .hotel-book-button:hover {
 	background-color: var(--brown-hover);
 }
-
 .hotel-book-button:active {
 	background-color: var(--brown-active);
 	color: var(--white-opacity);
