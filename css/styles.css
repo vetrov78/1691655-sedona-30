@@ -507,7 +507,7 @@ svg[class*="sign"]:active {
 	margin-bottom: 22px;
 }
 
-input.search-button {
+button.search-button {
 	grid-area: s;
 	width: 458px;
 	padding: 16px 0px;
@@ -519,12 +519,10 @@ input.search-button {
 	line-height: 27px;
 	border: none;
 }
-
-input.search-button:hover {
+button.search-button:hover {
 	background-color: var(--blue-hover);
 }
-
-input.search-button:active {
+button.search-button:active {
 	background-color: var(--blue-active);
 	color: var(--white-opacity);
 }
