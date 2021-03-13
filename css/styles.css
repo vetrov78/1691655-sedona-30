@@ -612,6 +612,7 @@ a[class*='button'] {
 
 .contacts-text {
 	margin-bottom: 9px;
+	color: var(--title-text);
 }
 
 .social-list {
