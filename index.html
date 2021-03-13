@@ -6,8 +6,8 @@
   <title>HTML Academy: Седона</title>
 
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.min.css">
-  <!-- <link rel="stylesheet" href="css/styles.css"> -->
+  <!-- <link rel="stylesheet" href="css/style.min.css"> -->
+  <link rel="stylesheet" href="css/styles.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap">
 
@@ -102,7 +102,7 @@
             <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
             <input class="top-search-button" type="button" value="Поиск гостиницы в Седоне">
     
-            <form class="bottom-search-form" method="get" action="https://echo.htmlacademy.ru" target="_blank">
+            <form class="bottom-search-form display-none" method="get" action="https://echo.htmlacademy.ru" target="_blank">
               
                 <label class="check-in-label" for="check-in">Дата заезда:</label>     
                 <input class="check-in-date" type="text" name="check-in-date" id="check-in" value="24 апреля 2017">   
@@ -190,6 +190,8 @@
           </a>
         </div>
     </footer>
+  
+    <script src="search.js"></script>
 </body>
 
 </html>
