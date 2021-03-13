@@ -4,6 +4,7 @@
   --basic-white: #FFFFFF;
   --white-opacity: rgba(255, 255, 255, 0.3);
   --footer-background: rgba(255, 255, 255, 0.9);
+  --shadow-color: rgba(0, 1, 1, 0.2);
   --basic-brown: #766357;
   --basic-blue: #81B3D2;
   --basic-gray:#888888;
@@ -74,7 +75,7 @@ p {
 	background-color: var(--basic-white);
 	display: grid;
 	grid-template-rows: min-content 1fr min-content;
-	box-shadow: 0px -15px 15px rgba(0, 1, 1, 0.2);
+	box-shadow: 0px -15px 15px var(--shadow-color);
 }
 
 .title-style {
@@ -88,7 +89,6 @@ p {
 .header-container {
 	line-height: 26px;
 	font-weight: 700;
-	box-shadow: -15px 0px 0px -15px rgba(0, 1, 1, 0.2);
 }
 
 .navigation-list, .features-list {
