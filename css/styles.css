@@ -895,11 +895,26 @@ input:focus {
 
 .sort-type-label{
 	position: relative;
+	cursor: pointer;
+	opacity: 0.3;
+	border-bottom: 1px dashed var(--basic-blue);
 }
 
-.sort-type-label input {
-	position: absolute;
-	opacity: 0;
+.sort-type-label.active {
+	color: var(--basic-blue);
+	opacity: 1;
+	border-bottom: none;
+}
+
+.sort-type-label:hover {
+	color: var(--basic-blue);
+	opacity: 1;
+}
+
+.sort-type-label:active {
+	color: var(--title-text);
+	opacity: 1;
+	border-bottom: none;
 }
 
 .sort-type-label:nth-child(4) {
@@ -915,11 +930,6 @@ input:focus {
 .sort-type-label:nth-child(6) {
 	margin-bottom: 4px;
 }
-
-.sort-type-label > span{
-	opacity: 0.3;
-	border-bottom: 1px dashed var(--basic-blue);
-}	
 
 .sort-type-label input:checked+span{
 	color: var(--basic-blue);
