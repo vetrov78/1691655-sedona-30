@@ -218,6 +218,7 @@ form.display-none {
 	flex-direction: column;
 	align-items: center;
 	background-color: var(--basic-white);
+	z-index: 1;
 }
 
 .top-title {
@@ -333,7 +334,6 @@ section[class*="illustrated"] {
 	line-height: 24px;
 	padding-right: 13px;
 	margin-bottom: 4px;
-
 }
 
 .bottom-title-text {
@@ -351,6 +351,8 @@ section[class*="illustrated"] {
 }
 
 .top-search-button {
+	position: relative;
+	display: block;
 	width: 100%;
 	padding: 30px 0px;
 	font-size: 21px;
@@ -358,6 +360,7 @@ section[class*="illustrated"] {
 	color: var(--basic-white);
 	background-color: var(--basic-brown);
 	border: none;
+	z-index: 1;
 }
 
 .top-search-button:hover {
@@ -383,6 +386,17 @@ section[class*="illustrated"] {
 	row-gap: 30px;
 	padding: 55px;
 	font-weight: 700;
+	z-index: 0;
+}
+
+@keyframes move-down {
+	from {top: -395px;}
+	to {top: 0;}
+}
+
+.form-animation {
+	animation-name: move-down;
+	animation-duration: 3s;
 }
 
 .bottom-search-form label {
@@ -539,7 +553,7 @@ button.search-button:active {
 	padding-left: 13px;
 }
 
-a[class*='button'] {
+.catalog-button {
 	padding: 3px 0px;
 	font-weight: 700;
 	line-height: 21px;
