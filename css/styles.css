@@ -981,16 +981,15 @@ input:focus {
 	margin-right: 0;
 }
 
-.arrow input {
-	position: absolute;
-	opacity: 0;
-}
-
 .arrow svg {
 	fill: var(--arrow);
 }
 
-.arrow input:checked ~ svg {
+.arrow.active svg {
+	fill: var(--basic-blue);
+}
+
+.arrow ~ svg {
 	fill: var(--basic-blue);
 }
 

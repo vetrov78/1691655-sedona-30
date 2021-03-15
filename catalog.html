@@ -6,8 +6,8 @@
   <title>Каталог гостиниц-Седона</title>
 
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.min.css">
-  <!-- <link rel="stylesheet" href="css/styles.css"> -->
+  <!-- <link rel="stylesheet" href="css/style.min.css"> -->
+  <link rel="stylesheet" href="css/styles.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap">
   
@@ -108,23 +108,21 @@
                 <div class="number-searched">Найдено: <span>3</span></div>
                 <span class="sort-type-text">Сортировка</span>
                
-                <span class="sort-type-label active">По цене</span>               
-                <span class="sort-type-label">По типу</span>                
-                <span class="sort-type-label">По рейтингу</span>
+                <a class="sort-type-label active" href="#">По цене</a>               
+                <a class="sort-type-label" href="#">По типу</a>                
+                <a class="sort-type-label" href="#">По рейтингу</a>
                 
                 <div class="sorted-arrows">
-                    <label class="arrow">
-                        <input type="radio" name="arrow">
+                    <a class="arrow" href="#">                        
                         <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M5.5 0L0 10H11L5.5 0Z"/>
                         </svg>
-                    </label>
-                    <label class="arrow">
-                        <input type="radio" name="arrow" checked>
+                    </a>
+                    <a class="arrow active" href="#">
                         <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M5.5 10L0 0H11"/>
                         </svg>    
-                    </label>               
+                    </a>               
                    
                 </div>
             </section>
