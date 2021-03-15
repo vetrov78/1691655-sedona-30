@@ -343,6 +343,7 @@ section[class*="illustrated"] {
 }
 
 .search-form-main-page{
+	overflow: hidden;
 	position: absolute;
 	top: 205px;
 	width: 568px;
